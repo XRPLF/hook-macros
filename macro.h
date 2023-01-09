@@ -525,7 +525,7 @@ int out_len = 0;\
 #ifdef HAS_CALLBACK
 #define PREPARE_PAYMENT_SIMPLE_TRUSTLINE_SIZE 309
 #else
-#define PREPARE_PAYMENT_SIMPLE_TRUSTLINE_SIZE 287
+#define PREPARE_PAYMENT_SIMPLE_TRUSTLINE_SIZE 288
 #endif
 #define PREPARE_PAYMENT_SIMPLE_TRUSTLINE(buf_out_master, tlamt, to_address, dest_tag_raw, src_tag_raw)\
     {\
