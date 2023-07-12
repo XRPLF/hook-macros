@@ -27,6 +27,11 @@
         rollback(0,0,__LINE__);\
 }
 
+#define NOPE(x)\
+{\
+    return rollback((x), sizeof(x), __LINE__);\
+}
+
 #define FLIP_ENDIAN(n) ((uint32_t) (((n & 0xFFU) << 24U) | \
                                    ((n & 0xFF00U) << 8U) | \
                                  ((n & 0xFF0000U) >> 8U) | \
@@ -318,6 +323,7 @@ int out_len = 0;\
 #define ttURITOKEN_BUY 47
 #define ttURITOKEN_CREATE_SELL_OFFER 48
 #define ttURITOKEN_CANCEL_SELL_OFFER 49
+#define ttIMPORT 97
 #define ttCLAIM_REWARD 98
 #define ttINVOKE 99
 #define ttAMENDMENT 100
